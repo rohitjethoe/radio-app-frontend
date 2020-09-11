@@ -12,7 +12,7 @@
                 <div :id="`radios-${ country.country_id }`" class="radios">
                     <div class="radio" v-for="radio in country" v-bind:key="radio.id">
                         <div class="radio-name">
-                            <a @click="$emit('change-radio', radio)">    
+                            <a class="radio-url" @click="$emit('change-radio', radio)">    
                                 {{ radio.name }}
                             </a>
                         </div>
