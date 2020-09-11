@@ -21,10 +21,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     .playing {
         margin-left: 5%;
-        margin-top: 5%;
+        margin-top: 15%;
         background-color: #fff;
         width: 80%;
         padding: 15px 10px;
