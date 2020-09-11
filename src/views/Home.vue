@@ -2,7 +2,7 @@
   <div class="home">
     <Header />
     <div class="container">
-      <Playing />
+      <Playing v-bind:playing="playing"/>
       <Stations v-bind:data="data" v-on:change-radio="changeRadio"/>
     </div>
   </div>
@@ -56,7 +56,7 @@ export default {
     padding: 0;
   }
 
-  .root {
+  .home {
     background-color: #84C2C0;
   }
   
