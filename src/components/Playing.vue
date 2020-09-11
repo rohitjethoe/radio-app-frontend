@@ -6,7 +6,10 @@
       <div class="radio">
         <a target="_blank" rel="noopener" noreferrer :href="playing.url" class="radio-url">
             Link to radio station source <i class="fas fa-external-link-alt"></i>
-        </a>
+        </a> <br>
+        <audio controls>
+            <source v-bind:src="playing.url">
+        </audio>
       </div>
   </div>
 </template>
@@ -20,6 +23,8 @@ export default {
 
 <style>
     .playing {
+        margin-left: 5%;
+        margin-top: 5%;
         background-color: #fff;
         width: 80%;
         padding: 15px 10px;
@@ -44,5 +49,10 @@ export default {
     .fas {
         font-size: 16px;
         margin-left: 5px;
+    }
+
+    audio {
+        margin-top: 40px;
+        width: 80%;
     }
 </style>
