@@ -5,6 +5,7 @@
       <Playing v-bind:playing="playing"/>
       <Stations v-bind:data="data" v-on:change-radio="changeRadio"/>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import axios from 'axios';
 
 // Includes
 import Header from '@/includes/Header';
+import Footer from '@/includes/Footer';
 
 // Components
 import Playing from '@/components/Playing';
@@ -34,7 +36,8 @@ export default {
   components: {
     Header,
     Playing,
-    Stations
+    Stations,
+    Footer
   },
   methods: {
     changeRadio(radio) {
@@ -60,4 +63,8 @@ export default {
     background-color: #84C2C0;
   }
   
+  .container {
+    min-height: calc(100vh - 150px);
+    margin-left: 5%;
+  }
 </style>
