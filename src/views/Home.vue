@@ -3,7 +3,7 @@
     <Header />
     <div class="container">
       <Playing />
-      <Stations v-bind:data="data"/>
+      <Stations v-bind:data="data" v-on:change-radio="changeRadio"/>
     </div>
   </div>
 </template>
@@ -24,13 +24,22 @@ export default {
   data() {
     return {
       data: null,
-      playing: null,
+      playing: {
+        id: 0,
+        name: "Radio Mix Bhakti",
+        url: "http://91.121.222.81:8342/stream?type=http&nocache=1266"
+      },
     }
   },
   components: {
     Header,
     Playing,
     Stations
+  },
+  methods: {
+    changeRadio(radio) {
+      this.playing = radio;
+    }
   },
   mounted() {
     axios.get("https://radiostations-app.herokuapp.com/api/radios")
