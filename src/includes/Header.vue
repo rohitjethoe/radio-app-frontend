@@ -31,12 +31,7 @@ export default {
 }
 </script>
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
+<style scoped>
     .opened .rect-1 {
         transform: translateY(8px);
     }
@@ -72,6 +67,10 @@ export default {
         text-transform: uppercase;
         padding-top: 5px;
         color: #fff;
+    }
+    
+    .logo::selection {
+        background-color: #84C2C0;
     }
 
     .radio {
