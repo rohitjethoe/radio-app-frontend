@@ -1,5 +1,5 @@
 <template>
-  <div class="root">
+  <div class="home">
     <Header />
     <div class="container">
       <Playing />
