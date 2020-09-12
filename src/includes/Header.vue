@@ -1,7 +1,7 @@
 <template>
   <div class="header" v-bind:class="{ opened : navStatus}">
-      <div class="nav">
-        <div @click="openNavBar()" class="burger-icon">
+      <div v-on:click="openNavBar()" class="nav">
+        <div class="burger-icon">
             <div class="rect rect-1"></div>
             <div class="rect"></div>
             <div class="rect rect-3"></div>
@@ -62,6 +62,7 @@ export default {
 
     .logo {
         text-align: center;
+        transform: translateX(-30px);
         font-family: 'Teko', sans-serif;
         font-size: 32px;
         text-transform: uppercase;
