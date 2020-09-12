@@ -3,6 +3,12 @@
     <Header />
     <div class="container">
       <Playing v-bind:playing="playing"/>
+      <div class="stations-title">
+        <div class="title">
+          Radio stations
+        </div>
+        <div class="rectangle"></div>
+      </div>
       <Stations v-bind:data="data" v-on:change-radio="changeRadio"/>
     </div>
     <Footer />
@@ -64,7 +70,26 @@ export default {
   }
   
   .container {
-    min-height: calc(100vh - 150px);
+    padding-top: 6%;
+    min-height: calc(100vh - 82px);
     margin-left: 5%;
+  }
+
+  .stations-title {
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+
+  .stations-title .title {
+    font-size: 36px; 
+    font-family: "Teko", sans-serif;
+    color: #fff;
+  }
+
+  .stations-title .rectangle {
+      width: 240px;
+      height: 10px;
+      margin-bottom: 20px;
+      background-color: #fff;
   }
 </style>
