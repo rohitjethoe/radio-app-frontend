@@ -24,7 +24,6 @@ export default {
 <style scoped>
     .playing {
         margin-left: 5%;
-        margin-top: 15%;
         background-color: #fff;
         width: 80%;
         padding: 15px 10px;
@@ -54,5 +53,11 @@ export default {
     audio {
         margin-top: 40px;
         width: 80%;
+    }
+
+    @media only screen and (min-width: 800px) {
+        .playing {
+            width: 640px;
+        }
     }
 </style>
